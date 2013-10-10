@@ -7,24 +7,26 @@ html
 body
 {
 	background: url("../images/background.png");
-	
 	height: 100%;
 	margin: 0;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	
-
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	color: #ffffff;
+	font-weight:bold;
 }
 
 /* Styling for main body text */
 div.main
 {
 	text-align: center;
+	
 }
 
 #recaptcha_area
 {
     margin: 0 auto;
+	border-radius: 15px; 
 }
 
 /* Styling for editor div */
@@ -32,14 +34,17 @@ div.editor
 {
 	width: 600px;
 	margin: 0 auto;
-	border-style: solid;
-	border-width: 3px;
-	border-radius: 3px;
-	border-color: rgb(150, 8, 10);
-	background-color: rgba(150, 10, 10, 0.8);
-	padding: 6px;
-	font-size: 20px;
-	color: #FFF;
+	/*border-style: solid;
+	border-width: 3px;*/
+	border-radius: 15px;
+	/*border-color: rgb(150, 8, 10);*/
+	background-color: rgba(255,230,230,0.4);
+	padding: 20px;
+	font-size: 16px;
+	text-transform:capitalize;
+	text-align: left;
+	/*color: #FFF;*/
+	vertical-align:text-top; 
 }
 
 /* Styling for the header */
@@ -47,11 +52,34 @@ h1
 {
 	background-color: #DDD;
     margin: 0 0 30px 0;
-    padding: 30px;
-    font-family: Arial;
+    padding: 15px 40px;
+	width: 100%; 
+	/*text-align: center; *
+    /*font-family: Arial;*/
     background-color: rgba(255,230,230,0.4);
-    font-size: 3em;
-    text-shadow: #FFF 0px 0px 9px;
+    font-size: 20px;
+	
+	/*color: #ffffff;*/	
+    /*text-shadow: #FFF 0px 0px 9px;*/
+}
+
+#left {
+  float: left;
+  /*width:33.33333%;*/
+  /*text-align:left;*/ 
+  display: inline-block; 
+  
+}
+
+#centered {
+	 /*float: left;*/
+  /*width:33.33333%;*/
+  /*text-align:left;*/
+  text-align: center; 
+  padding-bottom: 0px;
+  font-size: 16px; 
+  padding: 0px 15px;
+  display: inline-block;  
 }
 
 /* Styling for the poems */
@@ -80,29 +108,23 @@ pre.poem
 	text-align: left;
     margin: 10px;
     text-overflow: clip;
-    font-family: arial;
+    font-family: Arial;
 }
 
 /* Styling for the link colors */
-a:link
+a:link, a:visited, a:active, a:hover
 {
-	color: #1FE5FF;
-}
-a:visited
-{
-	color: #1FE5FF;
+	color: #ffffff;
+	text-decoration:none;
 }
 a:hover
 {
-	color: #BFF8FF;
-}
-a:active
-{
-	color: #1FE5FF;
+	color: #CCCCCC;
 }
 
 /* Styling for the navigation bar at the top */
 #navbar {
+	border-radius: 2px; 
 	float:left;
 	width:100%;
 	overflow:hidden;
@@ -122,24 +144,24 @@ a:active
 
 #navbar ul li a:hover {
 	background:#369;
-	color:#fff;
+	/*color:#fff;*/
 }
 
 #navbar ul li a.active,
 #navbar ul li a.active:hover {
-	color:#fff;
+	/*color:#fff;*/
 	background:#000;
 	font-weight:bold;
 }
 
 #navbar ul li {
-	display:block;
+	/*display:block;
 	float:left;
 	list-style:none;
 	margin:20px;
 	padding:0;
 	position:relative;
-	right:50%;
+	right:50%;*/
 }
 
 #navbar ul li a {
@@ -148,14 +170,51 @@ a:active
 	padding:3px 10px;
 	border:2px solid;
 	border-radius:25px;
-	color:#000;
+	color:#ffffff;
 	text-decoration:none;
 	font-size: 30px;
-	font-family:"Times New Roman", Times, serif;
+	/*font-family:"Times New Roman", Times, serif;*/
 	line-height:1.3em;
 }
 
 /* Our clear line break to clean up those floats! */
 br.clear {
 	clear:both;
+}
+
+input, textarea {
+	font: 20px sans-serif; 
+	border: 0px; 
+	font-color: #3B3B3B; 
+	font-size: 16px; 
+	padding: 8px; 
+	width: 98%; 
+	border-radius: 8px; 
+	-webkit-appearance: none;
+	margin-bottom: 15px;
+	outline: none; 
+	
+}
+
+textarea {
+	resize:vertical; 
+}
+
+input:focus, textarea:focus {
+	box-shadow: 0 0 5px #D9D9D9;
+}
+
+input[type="submit"] {
+	background: #A30003;
+	font-size: 16px;
+	color: #ffffff; 
+	text-align:center; 
+	width: 100px; 
+	cursor: pointer;
+	border-radius: 15px;
+	font-weight:bold;
+}
+
+input[type="submit"]:hover {
+	background: #820002;
 }
