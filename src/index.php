@@ -2,7 +2,7 @@
 	/**
 	* @author Ryan Rule-Hoffman
 	**/
-	$release = 5; // Build number
+	$release = 6; // Build number
 	
 	// Start out session.
 	session_start();
@@ -94,15 +94,16 @@
 	
 	<body>
 		<div class="main">
-			<h1>Honors Pizza Poem Submission</h1>
-			<div id="navbar">
-				<ul>
+        	<div id="navbar">
+				<h1><div id="left">Honors Pizza Poem Submission</div>
 			
-					<li><a href="?action=create">Submit Poems</a></li>
 				
-					<li><a href="?action=view">View Poems</a></li>
+			
+					<div id="centered"><a href="?action=create">Submit Poems</a></div>
 				
-				</ul>
+					<div id="centered"><a href="?action=view">View Poems</a></div></h1>
+				
+				
 			</div>
 			<br class="clear" />
 			<div class="auth">
@@ -403,17 +404,14 @@
 					?>
 					<form method="post" action="?action=submit">
 						
-						Poem Title<br />
+						Poem Title:
 						<input type="text" name="title" size="35" /><br />
 						
-						Author Name<br />
+						Author Name:
 						<input type="text" name="author" size="35" /><br />
 						
 						Poem Content:
-						<br />
-					
-						<textarea name="content" rows="5" cols="50"></textarea>
-						<br />
+						<textarea name="content" rows="5" cols="50"></textarea><br />
 						
 						<?php
 							if (hasPermission("poem.fastSubmit") != 1)
